@@ -3,10 +3,10 @@ body {
 }
 
 .header{
-    width: 550px;
-    height: 150px;
+    width: 500px;
+    height: 200px;
     position: absolute;
-    top: -10%;
+    top: -5%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -35,7 +35,7 @@ body {
 
 #search {
     width: 250px;
-    height: 250px;
+    height: 50px;
     position: absolute;
     top: 0;
     right: 0;
@@ -58,6 +58,11 @@ body {
     height: 50px;
     border: 0;
 }
+
+.content select {
+    outline: none;
+}
+
 #search-tickets {
     width: 200px;
     height: 50px;
@@ -72,8 +77,5 @@ body {
 
 .content input {
     padding-left: 15px;
-}
-
-h1 {
-    color: white;
+    outline-color: rgb(255, 123, 0);
 }

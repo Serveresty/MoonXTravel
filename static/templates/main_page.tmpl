@@ -9,18 +9,20 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="header"><img src="/static/img/logo2.svg" width="500" height="500"></div>
+        <div class="header"><a href="/"><img src="/static/img/logo2.svg" width="500" height="500"></a></div>
         <div class="content">
-        <table id="search">
-            <tr>
-                <td><input type="text" id="first-input" placeholder="Откуда"></td>
-                <td><input type="text" placeholder="Куда"></td>
-                <td><input type="text" placeholder="Когда"></td>
-                <td><input type="text" placeholder="Обратно"></td>
-                <td><select id="last-input"><option></option><option></option></select></td>
-                <td><button id="search-tickets">Найти билеты</button></td>
-            </tr>
-        </table>
+            <form id="check-all">
+                <table id="search">
+                    <tr>
+                        <td><input type="text" id="first-input" placeholder="Откуда"></td>
+                        <td><input type="text" placeholder="Куда"></td>
+                        <td><input type="text" placeholder="Когда"></td>
+                        <td><input type="text" placeholder="Обратно"></td>
+                        <td><select id="last-input"><option></option><option></option></select></td>
+                        <td><button id="search-tickets" type="submit">Найти билеты</button></td>
+                    </tr>
+                </table>
+            </form>
         </div>
         <div class="footer"><img src="/static/img/rights.svg" width="334" height="40"></div>
     </div>
