@@ -79,3 +79,11 @@ body {
     padding-left: 15px;
     outline-color: rgb(255, 123, 0);
 }
+
+.content option {
+    text-align: center;
+}
+
+label {
+    color: white;
+}
