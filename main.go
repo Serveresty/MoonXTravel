@@ -2,16 +2,17 @@ package main
 
 import (
 	"MoonXTravel/controllers"
-	"MoonXTravel/service"
 	"database/sql"
 	"log"
 	"net/http"
+
+	_ "github.com/go-sql-driver/mysql"
 
 	"github.com/julienschmidt/httprouter"
 )
 
 func main() {
-	DB, errdb := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/tickets_data")
+	DB, errdb := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/tickets")
 	if errdb != nil {
 		panic(errdb)
 	}
@@ -33,9 +34,9 @@ func main() {
 func routes(r *httprouter.Router, DB *sql.DB) {
 	r.ServeFiles("/static/*filepath", http.Dir("static"))
 
-	handler := service.DataBase{Data: DB}
+	handler := controllers.DataBase{Data: DB}
 
 	r.GET("/", controllers.MainPage)
-	r.GET("/results", controllers.SearchResultsPage)
-	r.POST("/results", handler.SearchTickets)
+	r.GET("/results", controllers.ResPage)
+	r.POST("/results", handler.SearchResultsPage)
 }

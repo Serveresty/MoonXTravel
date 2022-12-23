@@ -5,7 +5,6 @@
     <title>Search Tickets</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='/static/css/main.css'>
-    <script src='main.js'></script>
 </head>
 <body>
     <div class="wrapper">
@@ -18,22 +17,22 @@
                         <td><label>Куда</label></td>
                         <td><label>Когда</label></td>
                         <td><label>Обратно</label></td>
-                        <td><label>Пассажиры и класс</label></td>
+                        <td><label>Пассажиры</label></td>
                         <td><label></label></td>
                     </tr>
                     <tr>
-                        <td><select id="first-input"><option>Плесецк(Россия)</option><option>Байконур(Казахстан)</option><option>Капустин Яр(Россия)</option></select></td>
-                        <td><select><option>Луна</option><option>МКС</option></select></td>
-                        <td><input type="date" placeholder="Когда"></td>
-                        <td><input type="date" placeholder="Обратно"></td>
+                    <form method="post" action="/results">
+                        <td><select id="first-input" name="first-input"><option>Плесецк(Россия)</option><option>Байконур(Казахстан)</option><option>Капустин Яр(Россия)</option></select></td>
+                        <td><select id="destination" name="destination"><option>Луна</option><option>МКС</option></select></td>
+                        <td><input id="whento" name="whento" type="date" placeholder="Когда"></td>
+                        <td><input id="whenback" name="whenback" type="date" placeholder="Обратно"></td>
                         <td>
-                        <select id="last-input">
-                        <option>1 Эконом</option><option>2 Эконом</option><option>3 Эконом</option>
-                        <option>1 Комфорт</option><option>2 Комфорт</option><option>3 Комфорт</option>
-                        <option>1 Бизнес</option><option>2 Бизнес</option><option>3 Бизнес</option>
+                        <select id="last-input" name="last-input">
+                        <option>1</option><option>2</option><option>3</option>
                         </select>
                         </td>
                         <td><button id="search-tickets" type="submit">Найти билеты</button></td>
+                    </form>
                     </tr>
                 </table>
             </form>
