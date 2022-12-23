@@ -17,7 +17,7 @@ html, body {
     font-size: 14px;
     line-height: 1.4;
     color: #333;
-    background-color: #fff;
+    background: #00b7ff;
 }
 
 .header, .content-wrapper, .container, .footer {
@@ -37,7 +37,7 @@ html, body {
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
-    padding-left: 650px;
+    padding-left: 670px;
 }
 
 .footer {
@@ -48,7 +48,7 @@ html, body {
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
-    padding-left: 660px;
+    padding-left: 680px;
 }
 
 .content-wrapper {
@@ -62,11 +62,14 @@ html, body {
 }
 
 .sidebar {
-    background: #00ffe1;
+    background: #00b7ff;
     flex: 0 0 auto;
+    padding-top: 100px;
+    color: white;
 }
 
 .sidebar1 {
+    height: 400px;
     width: 850px;
 }
 
